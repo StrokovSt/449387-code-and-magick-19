@@ -1,7 +1,7 @@
 # Учебный проект «Код и Магия» [![Build status][travis-image]][travis-url]
 
 * Студент: [Иван Строков](https://up.htmlacademy.ru/javascript/19/user/449387).
-* Наставник: `Неизвестно`.
+* Наставник: [Никита Сигов](https://up.htmlacademy.ru/javascript/19/user/17860).
 
 ---
 
