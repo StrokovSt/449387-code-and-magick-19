@@ -11,10 +11,9 @@ var setupWizard = document.querySelector('.setup-wizard');
 var setupWizardCoat = setupWizard.querySelector('.wizard-coat');
 var setupWizardEyes = setupWizard.querySelector('.wizard-eyes');
 var setupWizardFireball = document.querySelector('.setup-fireball-wrap');
-console.log(setupWizardCoat);
 
-var usersList = document.querySelector('.setup-similar');
-//usersList.classList.remove('hidden');
+//  var usersList = document.querySelector('.setup-similar');
+//  usersList.classList.remove('hidden');
 var similarListElement = document.querySelector('.setup-similar-list');
 var similarWizardTemplate = document.querySelector('#similar-wizard-template').content.querySelector('.setup-similar-item');
 
@@ -129,11 +128,11 @@ dialogClose.addEventListener('keydown', function (evt) {
 
 // Ввод имени персонажа
 
-dialogUserName.addEventListener('focus', function (evt) {
+dialogUserName.addEventListener('focus', function () {
   document.removeEventListener('keydown', onDialogEscPress);
 });
 
-dialogUserName.addEventListener('invalid', function (evt) {
+dialogUserName.addEventListener('invalid', function () {
   if (dialogUserName.validity.tooShort) {
     dialogUserName.setCustomValidity('Имя должно состоять минимум из 2-х символов');
   } else if (dialogUserName.validity.tooLong) {
