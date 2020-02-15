@@ -132,6 +132,10 @@ dialogUserName.addEventListener('focus', function () {
   document.removeEventListener('keydown', onDialogEscPress);
 });
 
+dialogUserName.addEventListener('blur', function () {
+  document.addEventListener('keydown', onDialogEscPress);
+});
+
 dialogUserName.addEventListener('invalid', function () {
   if (dialogUserName.validity.tooShort) {
     dialogUserName.setCustomValidity('Имя должно состоять минимум из 2-х символов');
@@ -149,17 +153,17 @@ dialogUserName.addEventListener('invalid', function () {
 setupWizardCoat.addEventListener('click', function () {
   var wizardCoatColor = coatColor[getRandomNumber(0, coatColor.length)];
   setupWizardCoat.style.fill = wizardCoatColor;
-  document.getElementsByName('coat-color')[0].value = wizardCoatColor;
+  document.querySelector('input[name = coat-color]').value = wizardCoatColor;
 });
 
 setupWizardEyes.addEventListener('click', function () {
   var wizardEyesColor = eyesColor[getRandomNumber(0, eyesColor.length)];
   setupWizardEyes.style.fill = wizardEyesColor;
-  document.getElementsByName('eyes-color')[0].value = wizardEyesColor;
+  document.querySelector('input[name = eyes-color]').value = wizardEyesColor;
 });
 
 setupWizardFireball.addEventListener('click', function () {
   var wizardFireballColor = fireballColor[getRandomNumber(0, eyesColor.length)];
   setupWizardFireball.style.background = wizardFireballColor;
-  document.getElementsByName('fireball-color')[0].value = wizardFireballColor;
+  document.querySelector('input[name = fireball-color]').value = wizardFireballColor;
 });
