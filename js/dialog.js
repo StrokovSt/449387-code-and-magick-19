@@ -6,9 +6,10 @@
   var dialogOpen = document.querySelector('.setup-open');
   var dialogClose = document.querySelector('.setup-close');
   var dialogUserName = document.querySelector('.setup-user-name');
+  var form = userDialog.querySelector('.setup-wizard-form');
 
-  var DEFAULT_DIALOG_X = '50%';
-  var DEFAULT_DIALOG_Y = '80px';
+  var DEFAULT_DIALOG_X = getComputedStyle(userDialog).left;
+  var DEFAULT_DIALOG_Y = getComputedStyle(userDialog).top;
 
   var setDefaultDialogLocation = function () {
     userDialog.style.top = DEFAULT_DIALOG_Y;
@@ -55,4 +56,9 @@
     document.addEventListener('keydown', onDialogEscPress);
   });
 
+  form.addEventListener('submit', function (evt) {
+    window.save(new FormData(form), closeDialog, window.errorPush);
+    userDialog.classList.add('hidden');
+    evt.preventDefault();
+  });
 })();

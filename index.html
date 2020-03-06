@@ -182,6 +182,14 @@
   </div>
 </template>
 
+<template id="error-popup">
+  <div class="error-window">
+    <h2>Ошибка!</h2>
+    <p class="error-window__text">Текст ошибки</p>
+    <button class="error-window__button">Ok</button>
+  </div>
+</template>
+
 <script>
   var fireballSize = 22;
   var getFireballSped = function(left) {
@@ -206,6 +214,8 @@
 <script src="js/dialog.js"></script>
 <script src="js/transposition.js"></script>
 <script src="js/avatar.js"></script>
+<script src="js/error-popup.js"></script>
+<script src="js/backend.js"></script>
 <script src="js/mageList.js"></script>
 <script src="js/game.js"></script>
 
