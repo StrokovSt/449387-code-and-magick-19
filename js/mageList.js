@@ -5,7 +5,6 @@
   var similarListElement = document.querySelector('.setup-similar-list');
   var similarWizardTemplate = document.querySelector('#similar-wizard-template').content.querySelector('.setup-similar-item');
   var usersList = document.querySelector('.setup-similar');
-  var SIMILAR_MAGES = 4;
 
   // Функция создания DOM-элемента (мага)
 
@@ -19,13 +18,13 @@
 
   // Функция заполнения блока similarListElement магами
 
-  var documentFill = function (wizardList) {
-    for (var i = 0; i < SIMILAR_MAGES; i++) {
+  window.documentFill = function (wizardList) {
+    var takeNumber = wizardList.length > 4 ? 4 : wizardList.length;
+    similarListElement.innerHTML = '';
+    for (var i = 0; i < takeNumber; i++) {
       similarListElement.appendChild(renderWizard(wizardList[i]));
     }
     usersList.classList.remove('hidden');
   };
-
-  window.load(documentFill, window.errorPush);
 
 })();

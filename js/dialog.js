@@ -61,4 +61,5 @@
     userDialog.classList.add('hidden');
     evt.preventDefault();
   });
+
 })();
