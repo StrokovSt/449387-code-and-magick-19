@@ -18,7 +18,7 @@
     var wizardCoatColor = coatColor[window.getRandomNumber(0, coatColor.length)];
     setupWizardCoat.style.fill = wizardCoatColor;
     document.querySelector('input[name = coat-color]').value = wizardCoatColor;
-    window.onCoatChange(wizardCoatColor);
+    window.coatChange(wizardCoatColor);
   });
 
   setupWizardHead.addEventListener('click', function () {
@@ -29,7 +29,7 @@
     var wizardEyesColor = eyesColor[window.getRandomNumber(0, eyesColor.length)];
     setupWizardEyes.style.fill = wizardEyesColor;
     document.querySelector('input[name = eyes-color]').value = wizardEyesColor;
-    window.onEyesChange(wizardEyesColor);
+    window.eyesChange(wizardEyesColor);
   });
 
   setupWizardFireball.addEventListener('click', function () {

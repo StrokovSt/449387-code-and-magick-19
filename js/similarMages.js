@@ -32,12 +32,12 @@
     updateWizards();
   };
 
-  window.onEyesChange = window.debounce(function (color) {
+  window.eyesChange = window.debounce(function (color) {
     newEyesColor = color;
     updateWizards();
   });
 
-  window.onCoatChange = window.debounce(function (color) {
+  window.coatChange = window.debounce(function (color) {
     newCoatColor = color;
     updateWizards();
   });
